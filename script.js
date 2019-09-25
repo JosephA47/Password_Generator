@@ -1,9 +1,16 @@
-var userPassword = document.getElementById()
+var password = document.getElementById("password");
+var generate = document.getElementById("generate");
+var copy = document.getElementById("copy");
 
-var letter = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+var letter = ["abcdefghijklmnopqrstuvwxyz"];
 var number = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
-var special = ["!", "#", "$", "%", "&", "*", "+", "-", ":", ";", "<", "=", ">", "?", "@", "[", "]", "^", "_", "{", "|", "}", "~"];
+var special = ["!#$%&*+-:;<=>?@[]^_{|}~"];
 
-function randomPassword(){
+generate.addEventListener("click", function(){
+    var randomletter = Math.floor(Math.random(letter.length));
+    var randomnumber = Math.floor(Math.random(number.length));
+    var randomspecial = Math.floor(Math.random(special.length));
+
+    var characters = randomletter + randomnumber + randomspecial;
     
-}
+});
