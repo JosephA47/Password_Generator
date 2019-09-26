@@ -1,18 +1,24 @@
-var password = document.getElementById("password");
 var generate = document.getElementById("generate");
 var copy = document.getElementById("copy");
 
-var letter = ["abcdefghijklmnopqrstuvwxyz"];
-var number = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
-var special = ["!#$%&*+-:;<=>?@[]^_{|}~"];
 
-generate.addEventListener("click", function(){
-    for (var i = 0; i < 8 || i < 128; i++){
-        var randomletter = Math.floor(Math.random(letter.length));
-        var randomnumber = Math.floor(Math.random(number.length));
-        var randomspecial = Math.floor(Math.random(special.length));
+var str = ["abcdefghijklmnopqrstuvwxyz!#$%&*+-:;<=>?@[]^_{|}~0123456789"];
+var newpassword = "";
+var plength =  Math.floor(Math.random() * (8 -128)+8);
+
+function randomNumber() {
+    for (var i = 0; i < plength; i++){
+        var random = Math.floor(Math.random() * str.length);
+        newpassword += str.substring(random, random+1);
+        
+        var password = document.getElementById("password");
+        password.textContent = "Password: " + newpassword;
+        console.log(newpassword);
     }
+}
 
-    var characters = randomletter + randomnumber + randomspecial;
-    password.textContent = characters
-});
+generate.addEventListener("click", function(event) {
+    event.preventDefault();
+
+    randomNumber();
+})
