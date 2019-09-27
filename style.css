@@ -32,11 +32,8 @@
     float: right;
 }
 
-@media screen and (max-width: 768px) {
-    body {
-      background-color: #999;
-    }
-    .wrapper {
-        width: 600px;
+@media (max-width: 768px) {
+    body{
+        background: #999;
     }
 }
