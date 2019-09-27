@@ -1,6 +1,7 @@
 var generate = document.getElementById("generate");
 var copy = document.getElementById("copy");
 var password = document.getElementById("password");
+var clear = document.getElementById("clear");
 
 var str = "abcdefghijklmnopqrstuvwxyz!#$%&*+-:;<=>?@[]^_{|}~0123456789";
 var newpassword = '';
@@ -13,21 +14,31 @@ function randomNumber() {
         
     }
     password.textContent = "Password: " + newpassword;
-    console.log(newpassword);
+    console.log(newpassword);  
 }
 
 function copyPassword() {
-
     password.select();
 
     document.execCommand("copy");
     console.log(password.value);
 }
 
+function clearPassword() {
+    password.textContent = "";
+    
+}
+
 generate.addEventListener("click", function(event) {
     event.preventDefault(); 
 
     randomNumber();
+})
+
+clear.addEventListener("click", function (event) {
+    event.preventDefault();
+
+    clearPassword();
 })
 
 copy.addEventListener("click", function(event) {
