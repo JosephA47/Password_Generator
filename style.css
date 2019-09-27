@@ -1,0 +1,44 @@
+.container{
+    padding: 0px;
+    width: 655px;
+    background: none;
+    margin-left: 450px;
+
+}
+
+.h1{
+    text-align: center;
+    font-size: 70px;
+}
+
+.h2{
+    text-align: center;
+    font-size: 60px;
+}
+
+#password{
+    width: 650px;
+    height: 100px;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+#generate{
+    padding: 20px
+}
+
+#clear{
+    padding: 20px;
+    margin-left: 100px;
+}
+
+#copy{
+    padding: 20px;
+    float: right;
+}
+
+@media (max-width: 768px) {
+    body{
+        background: #999;
+    }
+}
